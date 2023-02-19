@@ -10,7 +10,7 @@ Program for recognition of colored objects on the surface. It is necessary to mo
 
 2. **DronePlatforma.py:**
 
-![alt text](C:\Users\alakh\Desktop\GitHub\Opencv_drone\image\platforma.png)
+![platforma](image\platforma.png)
 
 A program for recognizing a moving Aruco-tag, which is located on a vacuum cleaner. The quadcopter takes off, scans the area, detects the vacuum cleaner, then makes a gradual landing.
 You need to modify the code so that it detects the vacuum cleaner by contour or by color 
