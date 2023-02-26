@@ -27,7 +27,7 @@ A program for counting the number of objects (coins) from a photo test.jpg. Chec
 
 A program for recognizing the number of objects from a quadrocopter. Before starting, you need to set the minimum and maximum borders by HSV color: hsv_min, hsv_max. To configure these settings, use the PreferenceHSV.py program.
 
-(Программа по распознаванию количества объектов с квадрокоптера. Перед запуском необходимо настроить минимальное и максимальные границы по цвету HSV: hsv_min, hsv_max. Для натройки этих параметров используйте программу PreferenceHSV.py).
+(Программа по распознаванию количества объектов с квадрокоптера. Перед запуском необходимо настроить минимальное и максимальные границы по цвету HSV: hsv_min, hsv_max. Для натройки этих параметров используйте программу [PreferenceHSV.py](https://github.com/alakhmenev/Opencv_drone/blob/main/PreferenceHSV.py)).
 
 5. **PreferenceHSV.py:**
 
