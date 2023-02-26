@@ -42,16 +42,10 @@ hsv_max = np.array((255, 255, 253), np.uint8)
 def ima(data):
     global rgb, cnt, image, box, contours0
     image = bridge.imgmsg_to_cv2(data, 'bgr8')  
-    #gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    #blur = cv2.GaussianBlur(gray, (11, 11), 0)
-    #canny = cv2.Canny(blur, 30, 150, 3)
-    #dilated = cv2.dilate(canny, (1, 1), iterations=0)
+   
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV )
     thresh = cv2.inRange( hsv, hsv_min, hsv_max ) 
-    #(cnt, hierarchy) = cv2.findContours(dilated.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     contours0, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    #rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    #cv2.drawContours(rgb, cnt, -1, (0, 255, 0), 2)
     for cnt in contours0:
         rect = cv2.minAreaRect(cnt) # пытаемся вписать прямоугольник
         box = cv2.boxPoints(rect) # поиск четырех вершин прямоугольника
@@ -63,7 +57,6 @@ def ima(data):
 def rec():
     global image
     cv2.imshow('contours', image)
-    #plt.imshow(rgb)
     cv2.waitKey()
     cv2.destroyAllWindows()
 

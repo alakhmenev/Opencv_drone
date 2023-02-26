@@ -46,9 +46,7 @@ def ima(data):
     canny = cv2.Canny(blur, 10, 250)
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 7))
     closed = cv2.morphologyEx(canny, cv2.MORPH_CLOSE, kernel)
-    #hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV )
-    #thresh = cv2.inRange( hsv, hsv_min, hsv_max ) 
-    #(cnt, hierarchy) = cv2.findContours(dilated.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    
     cnts = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     cnts = imutils.grab_contours(cnts)
     total = 0
@@ -61,14 +59,7 @@ def ima(data):
         if len(approx) > 2:
             cv2.drawContours(image, [approx], -1, (0, 255, 0), 4)
             total += 1
-    #contours0, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    #rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    #cv2.drawContours(rgb, cnt, -1, (0, 255, 0), 2)
-    #for cnt in contours0:
-        #rect = cv2.minAreaRect(cnt) # пытаемся вписать прямоугольник
-        #box = cv2.boxPoints(rect) # поиск четырех вершин прямоугольника
-        #box = np.int0(box) # округление координат
-        #cv2.drawContours(image,[box],0,(255,0,0),2) # рисуем прямоугольник
+  
 
     image_pub.publish(bridge.cv2_to_imgmsg(image, 'bgr8'))
 
