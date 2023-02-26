@@ -25,15 +25,15 @@ A program for counting the number of objects (coins) from a photo test.jpg. Chec
 
 4. **CountHSV.py:**
 
-A program for recognizing the number of objects from a quadrocopter. Before starting, you need to set the minimum and maximum borders by HSV color: hsv_min, hsv_max. To configure these settings, use the PreferenceHSV.py program.
+A program for recognizing the number of objects from a quadrocopter. Before starting, you need to set the minimum and maximum borders by HSV color: hsv_min, hsv_max. To configure these settings, use the [PreferenceHSV.py](https://github.com/alakhmenev/Opencv_drone/blob/main/PreferenceHSV.py) program.
 
 (Программа по распознаванию количества объектов с квадрокоптера. Перед запуском необходимо настроить минимальное и максимальные границы по цвету HSV: hsv_min, hsv_max. Для натройки этих параметров используйте программу [PreferenceHSV.py](https://github.com/alakhmenev/Opencv_drone/blob/main/PreferenceHSV.py)).
 
 5. **PreferenceHSV.py:**
 
-Program for setting the minimum and maximum border values by HSV color: hsv_min, hsv_max. To do this, you need to take a photo (screenshot) of those objects that need to be recognized. Insert a link to the path to this photo in the code. Run and adjust the sliders until the subject in the photo is white. Write hsv_min, hsv_max values to CountHSV.py program.
+Program for setting the minimum and maximum border values by HSV color: hsv_min, hsv_max. To do this, you need to take a photo (screenshot) of those objects that need to be recognized. Insert a link to the path to this photo in the code. Run and adjust the sliders until the subject in the photo is white. Write hsv_min, hsv_max values to [CountHSV.py](https://github.com/alakhmenev/Opencv_drone/blob/main/CountHSV.py) program.
 
-(Программа для настройки минимального и максимальнго значений границы по цвету HSV: hsv_min, hsv_max. Для этого необходимо сделать фото (скриншот) тех объектов ,которые необходимо будет распознавать. Ссылку на путь до этой фотографии вставьте в код. Запускайте и регулируйте ползунки до тех пор, пока объект на фото не станет белым. Запишите значения hsv_min, hsv_max в программу CountHSV.py).
+(Программа для настройки минимального и максимальнго значений границы по цвету HSV: hsv_min, hsv_max. Для этого необходимо сделать фото (скриншот) тех объектов ,которые необходимо будет распознавать. Ссылку на путь до этой фотографии вставьте в код. Запускайте и регулируйте ползунки до тех пор, пока объект на фото не станет белым. Запишите значения hsv_min, hsv_max в программу [CountHSV.py](https://github.com/alakhmenev/Opencv_drone/blob/main/CountHSV.py)).
 
 6. **CountRect.py:**
 
